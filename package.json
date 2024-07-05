@@ -1,0 +1,51 @@
+{
+  "name": "to-async",
+  "version": "1.0.0",
+  "description": "A simple javascript package that converts functions to asynchronous functions",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaek-Dev/to-async.git"
+  },
+  "keywords": [
+    "async",
+    "asynchronous",
+    "promise",
+    "promises",
+    "function",
+    "javascript",
+    "function",
+    "js",
+    "functions",
+    "js",
+    "async",
+    "functions",
+    "convert",
+    "conveter"
+  ],
+  "author": "Jacob Eke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaek-Dev/to-async/issues"
+  },
+  "homepage": "https://github.com/Jaek-Dev/to-async#readme",
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5"
+  }
+}

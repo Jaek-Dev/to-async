@@ -1,5 +1,4 @@
-export type Fn<Args> = (...args: Args[]) => any;
-export function toAsyncFunction<A = unknown>(fn: Fn<A>) {
+export function toAsyncFunction<A = unknown>(fn: (...args: A[]) => any) {
 	return function (...args: A[]) {
 		try {
 			const result = fn(...args);

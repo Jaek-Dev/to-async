@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/yourusername/to-async.svg?branch=main)](https://travis-ci.org/jaek-dev/sync-to-async)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-`sync-to-async` is a lightweight JavaScript utility that converts synchronous functions into asynchronous functions. This is particularly useful for testing, simulating delays, or modernizing legacy code that uses synchronous operations.
+`sync-to-async` is a lightweight JavaScript package that converts synchronous functions into asynchronous functions. This is particularly useful for testing, simulating delays, or modernizing legacy code that uses synchronous operations.
 
 ## Installation
 

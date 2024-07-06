@@ -1,7 +1,7 @@
 {
   "name": "sync-to-async",
-  "version": "1.0.1",
-  "description": "A simple javascript package that converts functions to asynchronous functions",
+  "version": "1.0.2",
+  "description": "A simple javascript package that converts synchronous functions to asynchronous functions",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

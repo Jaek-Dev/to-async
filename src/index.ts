@@ -1,7 +1,7 @@
-export function toAsyncFunction<A = unknown>(fn: (...args: A[]) => any) {
-	return function (...args: A[]) {
+export function toAsyncFunction<A = unknown>(fn: (item?: A, ...args: A[]) => any) {
+	return function (item?: A, ...args: A[]) {
 		try {
-			const result = fn(...args);
+			const result = fn(item, ...args);
 			if (result instanceof Promise) {
 				return result;
 			} else {

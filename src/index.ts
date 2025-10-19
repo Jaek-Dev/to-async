@@ -1,14 +1,11 @@
-export function toAsyncFunction<A = unknown>(fn: (item?: A, ...args: A[]) => any) {
-	return function (item?: A, ...args: A[]) {
-		try {
-			const result = fn(item, ...args);
-			if (result instanceof Promise) {
-				return result;
-			} else {
-				return Promise.resolve(result);
-			}
-		} catch (error) {
-			return Promise.reject(error);
-		}
+export type Callable = (...args: any[]) => any;
+export type AsyncCallable<T extends Callable> = (
+	...args: Parameters<T>
+) => Promise<Awaited<ReturnType<T>>>;
+
+export function toAsync<Fn extends Callable>(fn: Fn) {
+	return async (...args: Parameters<Fn>) => {
+		const result = fn(...args);
+		return result instanceof Promise ? result : Promise.resolve(result);
 	};
 }

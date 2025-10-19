@@ -27,21 +27,21 @@ yarn add sync-to-async
 Here's a simple example of how to convert a synchronous function to an asynchronous function using `sync-to-async`:
 
 ```ts
-import { toAsyncFunction } from 'sync-to-async';
+import { toAsync } from "sync-to-async";
 
-const asyncMultiply = toAsyncFunction(syncMultiply)
+const asyncMultiply = toAsync(syncMultiply);
 function syncMultiply(x: number) {
-  return x * 2;
+	return x * 2;
 }
 
-asyncMultiply(10).then(result => {
-  console.log(result); // Output: 20
+asyncMultiply(10).then((result) => {
+	console.log(result); // Output: 20
 });
 ```
 
 ## API
 
-`toAsyncFunction(fn)`
+`toAsync(fn)`
 `fn` (Function): The synchronous function to be converted to asynchronous.
 Returns a new function that returns a Promise.
 

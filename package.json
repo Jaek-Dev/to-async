@@ -1,6 +1,6 @@
 {
   "name": "sync-to-async",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple javascript package that converts synchronous functions to asynchronous functions",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "jest"
+    "test": "jest",
+    "publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",

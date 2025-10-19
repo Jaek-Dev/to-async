@@ -1,17 +1,17 @@
-import { toAsyncFunction } from "../src";
+import { toAsync } from "../src";
 
 test("should return a function", () => {
-	const fn = toAsyncFunction(() => 1);
+	const fn = toAsync(() => 1);
 	expect(fn).toBeInstanceOf(Function);
 });
 
 test("should return a promise", () => {
-	const fn = toAsyncFunction(() => 1);
+	const fn = toAsync(() => 1);
 	expect(fn()).toBeInstanceOf(Promise);
 });
 
 test("should return the correct value", () => {
-	const fn = toAsyncFunction((boolean) => boolean);
+	const fn = toAsync((boolean: boolean) => boolean);
 	fn(false).then((value) => {
 		expect(value).toBe(false);
 	});
